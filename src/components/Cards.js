@@ -3,7 +3,7 @@ import React from 'react'
 
 function Cards() {
   return (
-    <div>
+    <>
       <div className="row">
         <div className="col">
           <strong>Profile Image</strong>
@@ -26,7 +26,7 @@ function Cards() {
       </div>
 
       <div className="row">{/* <Card /> */}</div>
-    </div>
+    </>
   )
 }
 

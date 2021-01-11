@@ -1,44 +1,36 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Rows from './Rows'
-import API from '../utils/API'
 
-function TableHeading() {
-  const [employees, setEmployees] = useState([])
-  const [filter, setFilter] = useState('')
-
-  useEffect(() => {
-    API.getEmployees().then((res) => {
-      setEmployees(res)
-    })
-  }, [])
-
+function TableHeading({ employees, setEmployees }) {
   return (
-    <>
-      <div className="row justify-content-around">
-        <div className="col-1">
-          <strong>Profile Image</strong>
-        </div>
-        <div className="col-1">
-          <strong>First Name</strong>
-        </div>
-        <div className="col-1">
-          <strong>Last Name</strong>
-        </div>
-        <div className="col-3 justify-content-center">
-          <strong>Title</strong>
-        </div>
-        <div className="col-3">
-          <strong>Email</strong>
-        </div>
-        <div className="col-3 justify-content-center">
-          <strong>Phone Number</strong>
-        </div>
-      </div>
+    <table className="border-top border-info">
+      <tbody>
+        <tr className="row justify-content-around">
+          <td className="col-1">
+            <strong>Profile Image</strong>
+          </td>
+          <td className="col-1">
+            <strong>First Name</strong>
+          </td>
+          <td className="col-1">
+            <strong>Last Name</strong>
+          </td>
+          <td className="col-3 justify-content-center">
+            <strong>Title</strong>
+          </td>
+          <td className="col-3">
+            <strong>Email</strong>
+          </td>
+          <td className="col-3 justify-content-center">
+            <strong>Phone Number</strong>
+          </td>
+        </tr>
 
-      {employees.map((employee) => {
-        return <Rows employee={employee} setEmployees={setEmployees} />
-      })}
-    </>
+        {employees.map((employee) => {
+          return <Rows employee={employee} setEmployees={setEmployees} />
+        })}
+      </tbody>
+    </table>
   )
 }
 

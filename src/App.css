@@ -1,0 +1,17 @@
+/* .container {
+  min-width: 992px;
+} */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(5px + 1vmin);
+  min-width: 768px;
+  width: 100%;
+  overflow: auto;
+}
+
+tr:nth-child(even) {
+  background-color: #fbfbfb;
+}

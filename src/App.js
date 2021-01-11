@@ -2,15 +2,16 @@ import React from 'react'
 import Heading from './components/Heading'
 // import FilterByName from './Components/FilterByName'
 // import FilterByTitle from './components/FilterByTitle'
-import Cards from './components/Cards'
+import TableHeading from './components/TableHeading'
+import './App.css'
 
 function App() {
   return (
-    <div className="container ">
+    <div className="container" style={{ textAlign: 'enter' }}>
       <Heading />
       {/* <FilterByName />
       <FilterByTitle /> */}
-      <Cards />
+      <TableHeading />
     </div>
   )
 }

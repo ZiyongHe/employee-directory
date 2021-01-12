@@ -34,9 +34,14 @@ function App() {
           setFilter={setFilter}
           employees={employees}
           setEmployees={setEmployees}
+          key={'Title Check Box'}
         />
       </div>
-      <TableHeading employees={employees} setEmployees={setEmployees} />
+      <TableHeading
+        employees={employees}
+        setEmployees={setEmployees}
+        key={'Table'}
+      />
     </div>
   )
 }

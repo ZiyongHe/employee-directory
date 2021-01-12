@@ -69,7 +69,7 @@ function TableHeading({ employees, setEmployees }) {
         {employees
           .filter((employee) => employee.selected)
           .map((employee) => {
-            return <Rows employee={employee} key={employee.phone} />
+            return <Rows employee={employee} key={employee.fullName} />
           })}
       </tbody>
     </table>

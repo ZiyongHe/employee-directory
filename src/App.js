@@ -21,14 +21,14 @@ function App() {
     })
   }, [])
 
-  // useEffect(() => {
-
-  // }, [employees])
-
   return (
     <div className="container">
       <div className="row mt-3 mb-3">
-        <Heading />
+        <Heading
+          employees={employees}
+          setEmployees={setEmployees}
+          key={'Employee Directory'}
+        />
         <TitleCheckBox
           filter={filter}
           setFilter={setFilter}
@@ -36,7 +36,6 @@ function App() {
           setEmployees={setEmployees}
         />
       </div>
-      {/* <FilterByName /> */}
       <TableHeading employees={employees} setEmployees={setEmployees} />
     </div>
   )

@@ -23,6 +23,7 @@ const getRandomTitle = (userList) => {
   const results = userList.map((user) => {
     user.title = titles[Math.floor(Math.random() * Math.floor(4))]
     user.selected = true
+    user.fullName = (user.name.first + ' ' + user.name.last).toUpperCase()
     return user
   })
   return results

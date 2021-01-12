@@ -11,6 +11,10 @@
   overflow: auto;
 }
 
+#sort {
+  cursor: pointer;
+}
+
 tr:nth-child(even) {
   background-color: #fbfbfb;
 }

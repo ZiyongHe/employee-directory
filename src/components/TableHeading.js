@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Rows from './Rows'
 
 function TableHeading({ employees, setEmployees }) {
@@ -31,6 +31,7 @@ function TableHeading({ employees, setEmployees }) {
       default:
         break
     }
+    sortedArray[0].reRender++
     setEmployees(sortedArray)
     console.log(employees)
   }
@@ -42,14 +43,18 @@ function TableHeading({ employees, setEmployees }) {
           <td className="col-1">
             <strong>Profile Image</strong>
           </td>
-          <button className="col-2" onClick={() => sortTable('first')}>
+          <td className="col-2">
             <i className="fa fa-sort mr-1"></i>
-            <strong>First Name</strong>
-          </button>
-          <button className="col-2" onClick={() => sortTable('last')}>
+            <strong id="sort" onClick={() => sortTable('first')}>
+              First Name
+            </strong>
+          </td>
+          <td className="col-2">
             <i className="fa fa-sort mr-1"></i>
-            <strong>Last Name</strong>
-          </button>
+            <strong id="sort" onClick={() => sortTable('last')}>
+              Last Name
+            </strong>
+          </td>
           <td className="col-2 justify-content-center">
             <strong>Title</strong>
           </td>
@@ -64,7 +69,7 @@ function TableHeading({ employees, setEmployees }) {
         {employees
           .filter((employee) => employee.selected)
           .map((employee) => {
-            return <Rows employee={employee} />
+            return <Rows employee={employee} key={employee.phone} />
           })}
       </tbody>
     </table>

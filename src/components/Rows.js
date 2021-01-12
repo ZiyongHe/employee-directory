@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Rows({ employee, setEmployees }) {
+function Rows({ employee }) {
   return (
     <tr className="row justify-content-around pt-2 pb-2">
       <td className="col-1">

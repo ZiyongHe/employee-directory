@@ -8,22 +8,29 @@ import './App.css'
 
 function App() {
   const [employees, setEmployees] = useState([])
-  const [filter, setFilter] = useState('')
-  let employeeList = []
+  const [filter, setFilter] = useState({
+    'Front-End Developer': true,
+    'Back-End Developer': true,
+    'Full-Stack Developer': true,
+    'Automated Testing': true,
+  })
 
   useEffect(() => {
     API.getEmployees().then((res) => {
       setEmployees(res)
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      employeeList = res
     })
   }, [])
 
   return (
-    <div className="container" style={{ textAlign: 'enter' }}>
+    <div className="container">
       <div className="row mt-3 mb-3">
         <Heading />
-        <TitleCheckBox />
+        <TitleCheckBox
+          filter={filter}
+          setFilter={setFilter}
+          employees={employees}
+          setEmployees={setEmployees}
+        />
       </div>
       {/* <FilterByName /> */}
       <TableHeading employees={employees} setEmployees={setEmployees} />

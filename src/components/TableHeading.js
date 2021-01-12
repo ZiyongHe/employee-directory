@@ -2,10 +2,12 @@ import React from 'react'
 import Rows from './Rows'
 
 function TableHeading({ employees, setEmployees }) {
+  const employeesToRender = employees.filter((employee) => employee.selected)
+
   return (
     <table className="border-top border-info">
       <tbody>
-        <tr className="row justify-content-around">
+        <tr className="row justify-content-around mt-2 mb-2">
           <td className="col-1">
             <strong>Profile Image</strong>
           </td>
@@ -26,8 +28,8 @@ function TableHeading({ employees, setEmployees }) {
           </td>
         </tr>
 
-        {employees.map((employee) => {
-          return <Rows employee={employee} setEmployees={setEmployees} />
+        {employeesToRender.map((employee) => {
+          return <Rows employee={employee} />
         })}
       </tbody>
     </table>

@@ -1,9 +1,18 @@
 import React from 'react'
 
-function TitleCheckBox() {
-  // checkboxHandler(event){
-  //     event.target.value
-  // }
+function TitleCheckBox({ filter, setFilter, employees, setEmployees }) {
+  const checkboxHandler = (event) => {
+    setFilter({ ...filter, [event.target.value]: !filter[event.target.value] })
+
+    let filteredEmployees = employees.map((employee) => {
+      if (employee.title === event.target.value) {
+        return { ...employee, selected: !employee.selected }
+      } else {
+        return employee
+      }
+    })
+    setEmployees(filteredEmployees)
+  }
 
   return (
     <div className="col">
@@ -11,50 +20,40 @@ function TitleCheckBox() {
         <input
           type="checkbox"
           value="Front-End Developer"
-          //   checked={filter['Front-End Developer']}
-          //   onChange={checkboxHandler}
+          checked={filter['Front-End Developer']}
+          onChange={checkboxHandler}
         ></input>
-        <label>Front-End Developer</label>
+        <label className="ml-2">Front-End Developer</label>
       </div>
 
       <div className="checkbox">
         <input
           type="checkbox"
           value="Back-End Developer"
-          //   checked={filter['Back-End Developer']}
-          //   onChange={checkboxHandler}
+          checked={filter['Back-End Developer']}
+          onChange={checkboxHandler}
         ></input>
-        <label>Back-End Developer</label>
+        <label className="ml-2">Back-End Developer</label>
       </div>
 
       <div className="checkbox">
         <input
           type="checkbox"
           value="Full-Stack Developer"
-          //   checked={filter['Full-Stack Developer']}
-          //   onChange={checkboxHandler}
+          checked={filter['Full-Stack Developer']}
+          onChange={checkboxHandler}
         ></input>
-        <label>Full-Stack Developer</label>
-      </div>
-
-      <div className="checkbox">
-        <input
-          type="checkbox"
-          value="DevOps"
-          //   checked={filter['DevOps']}
-          //   onChange={checkboxHandler}
-        ></input>
-        <label>DevOps</label>
+        <label className="ml-2">Full-Stack Developer</label>
       </div>
 
       <div className="checkbox">
         <input
           type="checkbox"
           value="Automated Testing"
-          //   checked={filter['Automated Testing']}
-          //   onChange={checkboxHandler}
+          checked={filter['Automated Testing']}
+          onChange={checkboxHandler}
         ></input>
-        <label>Automated Testing</label>
+        <label className="ml-2">Automated Testing</label>
       </div>
     </div>
   )

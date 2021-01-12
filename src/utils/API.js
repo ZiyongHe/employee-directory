@@ -2,7 +2,6 @@ const titles = [
   'Front-End Developer',
   'Back-End Developer',
   'Full-Stack Developer',
-  'DevOps',
   'Automated Testing',
 ]
 const API = {
@@ -22,7 +21,8 @@ const API = {
 
 const getRandomTitle = (userList) => {
   const results = userList.map((user) => {
-    user.title = titles[Math.floor(Math.random() * Math.floor(5))]
+    user.title = titles[Math.floor(Math.random() * Math.floor(4))]
+    user.selected = true
     return user
   })
   return results

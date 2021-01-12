@@ -9,11 +9,11 @@ function Rows({ employee }) {
           alt={employee.name.first + employee.name.last}
         />
       </td>
-      <td className="col-1">{employee.name.first}</td>
-      <td className="col-1">{employee.name.last}</td>
-      <td className="col-3 justify-content-center">{employee.title}</td>
+      <td className="col-2">{employee.name.first}</td>
+      <td className="col-2">{employee.name.last}</td>
+      <td className="col-2">{employee.title}</td>
       <td className="col-3">{employee.email}</td>
-      <td className="col-3 justify-content-center">{employee.phone}</td>
+      <td className="col-2 justify-content-end">{employee.phone}</td>
     </tr>
   )
 }

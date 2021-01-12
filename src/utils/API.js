@@ -8,7 +8,7 @@ const API = {
   getEmployees: function () {
     return (
       fetch(
-        'https://randomuser.me/api/?results=30&inc=picture,name,email,phone&noinfo&nat=ca'
+        'https://randomuser.me/api/?results=4&inc=picture,name,email,phone&noinfo&nat=ca'
       )
         .then((response) => response.json())
         //Assigning a title from the titles array to each employee

@@ -3,11 +3,10 @@ import Rows from './Rows'
 
 function TableHeading({ employees, setEmployees }) {
   const sortTable = (sortBy) => {
-    let sortedArray = employees
-    let copy = employees
+    let copy = [...employees]
     switch (sortBy) {
       case 'first':
-        sortedArray = copy.sort((a, b) => {
+        copy.sort((a, b) => {
           if (a.name.first < b.name.first) {
             return -1
           }
@@ -18,7 +17,7 @@ function TableHeading({ employees, setEmployees }) {
         })
         break
       case 'last':
-        sortedArray = copy.sort((a, b) => {
+        copy.sort((a, b) => {
           if (a.name.last < b.name.last) {
             return -1
           }
@@ -31,9 +30,7 @@ function TableHeading({ employees, setEmployees }) {
       default:
         break
     }
-    sortedArray[0].reRender++
-    setEmployees(sortedArray)
-    console.log(employees)
+    setEmployees(copy)
   }
 
   return (

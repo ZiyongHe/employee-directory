@@ -4,9 +4,9 @@
 
 ## Description
 
-This web app is created with React in a business context where a easy employee information lookup is needed. This app allows user to quickly access to employee information including profile image, last name, first name, email and phone number. Some functionalities are implemented to boost lookup efficiency, such as sorting name, filtering title, searching name.
+This web app is created with React in a business context where an easy employee information lookup method is needed. Dummy employees are generated with randomuser API. This app allows user to quickly access to employee information including profile image, last name, first name, email and phone number. Some functionalities are implemented to boost lookup efficiency, such as sorting name, filtering title, searching name.
 
-:link: Link to deployed application
+:link: [Link to deployed application](https://ziyonghe.github.io/employee-directory/)
 
 ![application preview](./assets/appPreview.PNG)
 
@@ -15,7 +15,7 @@ This web app is created with React in a business context where a easy employee i
 1. For run the application locally run `npm install` command at working directory.
 2. Then run `npm start` to launch the web app.
 
-### Lookup Employees at Ease
+**Lookup Employees at Ease**
 
 - Searching by name
 - Sorting first name or last name in alphabetic order
@@ -26,6 +26,7 @@ This web app is created with React in a business context where a easy employee i
 - React
 - Bootstrap 4.5
 - Font Awesome 5
+- Randomuser API
 
 ## License
 

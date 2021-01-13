@@ -1,55 +1,36 @@
-# Unit 19 React Homework: Employee Directory
+# Employee Directory
 
-## Overview
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+## Description
 
-## User Story
+This web app is created with React in a business context where a easy employee information lookup is needed. This app allows user to quickly access to employee information including profile image, last name, first name, email and phone number. Some functionalities are implemented to boost lookup efficiency, such as sorting name, filtering title, searching name.
 
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+:link: Link to deployed application
 
-## Business Context
+![application preview](./assets/appPreview.PNG)
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+## Installation and Usage
 
-## Acceptance Criteria
+1. For run the application locally run `npm install` command at working directory.
+2. Then run `npm start` to launch the web app.
 
-Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
+### Lookup Employees at Ease
 
-The user should be able to:
+- Searching by name
+- Sorting first name or last name in alphabetic order
+- Filtering out employee titles
 
-  * Sort the table by at least one category
+## Built with
 
-  * Filter the users by at least one property.
+- React
+- Bootstrap 4.5
+- Font Awesome 5
 
-## Commit Early and Often
+## License
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+This application is covered under the **MIT license**.
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+## Questions
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-Follow these guidelines for committing:
-
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-* Test your application before you commit to ensure functionality at every step in the development process
-
-* We would like you to have well over 200 commits by graduation, so commit early and often!
-
-* Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
-
-* **Important**: Be sure to push your codebase to GitHub and **NOT** your built and deployed code. Ensure this happens by following the above instructions and using the `gh-pages` branch to host the deployed application's code.
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* the URL to the deployed application
-
-* the URL to the Github repository
+Questions are welcome to send to me via [email](ziyonghe94@gmail.com) regarding to this applicaton.

@@ -34,4 +34,4 @@ This application is covered under the **MIT license**.
 
 ## Questions
 
-Questions are welcome to send to me via [email](ziyonghe94@gmail.com) regarding to this applicaton.
+Questions are welcome to send to me via [email](mailto:ziyonghe94@gmail.com) regarding to this applicaton.
